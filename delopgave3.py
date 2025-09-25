@@ -1,0 +1,31 @@
+import pandas as pd
+import os
+import pathlib
+
+#• Skrivefejl: Hvad hvis destinationsfilen er skrivebeskyttet, eller der mangler tilladelser?
+# FileExistsError
+# FileNotFoundError
+# PermissionError
+def read_and_write(source_file, destination_file):
+    source_file_exists = False
+    if not os.path.exists(source_file):
+        print("The source file does not exist. Please ensure that the file name is spelt correctly.")
+    else:
+        source_file_exists = True
+
+    source_file_extension = pathlib.Path(source_file).suffix
+    destination_file_extension = pathlib.Path(destination_file).suffix
+    if source_file_extension != destination_file_extension:
+        print("The file extensions are not compatible. Please check for potential misspellings.")
+
+    destination_file_exists = os.path.exists(destination_file)
+    if source_file_exists and not destination_file_exists:
+        df = pd.read_csv(source_file)
+
+        try:
+            df.to_csv(destination_file)
+        except FileExistsError:
+            print("The destination file already exists.")
+
+
+read_and_write("data\\source_data.csv", "random.csv")
