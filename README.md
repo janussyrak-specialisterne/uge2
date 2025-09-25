@@ -1,4 +1,4 @@
-# \# Data Migration Script
+# Data Migration Script
 
 # 
 
@@ -10,13 +10,13 @@
 
 # 
 
-# \## Setup (Windows)
+## Setup (Windows)
 
 # 
 
 # ```powershell
 
-# \# Create and activate a virtual environment
+# Create and activate a virtual environment
 
 # python -m venv venv
 
@@ -24,7 +24,7 @@
 
 # 
 
-# \# Install dependency
+# Install dependency
 
 # pip install pandas
 
@@ -36,13 +36,13 @@
 
 # 
 
-# \## Usage
+## Usage
 
 # 
 
 # ```powershell
 
-# python migrator.py data\\source\_data.csv random.csv
+# python delopgave1.py data\\source\_data.csv random.csv
 
 # ```
 
@@ -62,7 +62,7 @@
 
 # 
 
-# \## Deactivate the environment
+# # Deactivate the environment
 
 # 
 
