@@ -27,6 +27,7 @@ def read_and_write(source_file: str, destination_file: str) -> bool:
         print("The destination file already exists.")
     df.to_csv(destination_file)
 
+    print("read_and_write was successful")
     return True
 
 
