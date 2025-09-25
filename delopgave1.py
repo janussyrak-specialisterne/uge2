@@ -24,15 +24,3 @@ for name in names:
 sns.set_theme()
 sns.relplot(data=letters)
 plt.show()
-
-# Print the result
-for key in sorted(letters.keys()):
-    print(key, letters[key])
-
-# Count and remove duplicates
-unique_names = set()
-for name in names:
-    unique_names.add(name)
-
-print("Names before: ", len(names))
-print("Names after: ", len(unique_names))

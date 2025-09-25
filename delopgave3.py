@@ -1,7 +1,7 @@
 import pandas as pd
 from pathlib import Path
 import argparse
-import sys 
+import sys
 
 def read_and_write(source_file: str, destination_file: str) -> bool:
     src = Path(source_file)
