@@ -1,5 +1,7 @@
 import pandas as pd
 from pathlib import Path
+import argparse
+import sys 
 
 def read_and_write(source_file: str, destination_file: str) -> bool:
     src = Path(source_file)
@@ -31,4 +33,17 @@ def read_and_write(source_file: str, destination_file: str) -> bool:
     return True
 
 
-read_and_write("data\\source_data.csv", "random.csv")
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser(
+        description="Copy a CSV file from a source path to a destination path with basic error handling."
+    )
+    parser.add_argument("source", help="Path to the source CSV file.")
+    parser.add_argument("destination", help="Path to the destination CSV file.")
+    args = parser.parse_args(argv)
+
+    success = read_and_write(args.source, args.destination)
+    return 0 if success else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())
