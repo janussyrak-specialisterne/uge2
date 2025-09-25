@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 from pathlib import Path
 
 def read_and_write(source_file: str, destination_file: str) -> bool:
