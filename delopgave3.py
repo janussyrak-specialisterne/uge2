@@ -6,7 +6,7 @@ import pathlib
 # FileExistsError
 # FileNotFoundError
 # PermissionError
-def read_and_write(source_file, destination_file):
+def read_and_write(source_file: str, destination_file: str) -> None:
     source_file_exists = False
     if not os.path.exists(source_file):
         print("The source file does not exist. Please ensure that the file name is spelt correctly.")
