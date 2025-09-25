@@ -1,38 +1,76 @@
-# cmake\_minimum\_required(VERSION 3.21)
-
-# project(uge2 LANGUAGES CXX)
+# \# Data Migration Script
 
 # 
 
-# \# Qt 6 Widgets
-
-# find\_package(Qt6 REQUIRED COMPONENTS Widgets)
+# This repository contains a small Python script that copies a CSV file from a \*\*source\*\* path to a \*\*destination\*\* path with basic error handling.
 
 # 
 
-# set(CMAKE\_AUTOMOC ON)
-
-# set(CMAKE\_AUTOUIC ON)
-
-# set(CMAKE\_AUTORCC ON)
+# ---
 
 # 
 
-# \# Executable
-
-# add\_executable(uge2 WIN32
-
-# &nbsp;   mastermind.cpp)
+# \## Setup (Windows)
 
 # 
 
-# \# C++ standard
+# ```powershell
 
-# target\_compile\_features(uge2 PRIVATE cxx\_std\_17)
+# \# Create and activate a virtual environment
+
+# python -m venv venv
+
+# venv\\Scripts\\Activate.ps1
 
 # 
 
-# \# Link Qt
+# \# Install dependency
 
-# target\_link\_libraries(uge2 PRIVATE Qt6::Widgets)
+# pip install pandas
+
+# ```
+
+# 
+
+# ---
+
+# 
+
+# \## Usage
+
+# 
+
+# ```powershell
+
+# python migrator.py data\\source\_data.csv random.csv
+
+# ```
+
+# 
+
+# \- First argument: path to the source `.csv`
+
+# \- Second argument: path to the destination `.csv`
+
+# 
+
+# The script prints either a success message or an error explanation.
+
+# 
+
+# ---
+
+# 
+
+# \## Deactivate the environment
+
+# 
+
+# ```powershell
+
+# deactivate
+
+# ```
+
+# 
 
