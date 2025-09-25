@@ -2,10 +2,6 @@ import pandas as pd
 import os
 import pathlib
 
-#• Skrivefejl: Hvad hvis destinationsfilen er skrivebeskyttet, eller der mangler tilladelser?
-# FileExistsError
-# FileNotFoundError
-# PermissionError
 def read_and_write(source_file: str, destination_file: str) -> None:
     source_file_exists = False
     if not os.path.exists(source_file):
