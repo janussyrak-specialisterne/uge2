@@ -1,76 +1,60 @@
 # Data Migration Script
 
-# 
 
-# This repository contains a small Python script that copies a CSV file from a \*\*source\*\* path to a \*\*destination\*\* path with basic error handling.
+This repository contains a small Python script that copies a CSV file from a \*\*source\*\* path to a \*\*destination\*\* path with basic error handling.
 
-# 
-
-# ---
-
-# 
 
 ## Setup (Windows)
 
-# 
+ ```powershell
 
-# ```powershell
+Create and activate a virtual environment
 
-# Create and activate a virtual environment
+python -m venv venv
 
-# python -m venv venv
+venv\\Scripts\\Activate.ps1
 
-# venv\\Scripts\\Activate.ps1
 
-# 
+Install dependency
 
-# Install dependency
+pip install pandas
 
-# pip install pandas
+```
 
-# ```
 
-# 
 
-# ---
+---
 
-# 
 
 ## Usage
 
-# 
+```powershell
 
-# ```powershell
+python delopgave1.py data\\source\_data.csv random.csv
 
-# python delopgave1.py data\\source\_data.csv random.csv
+```
 
-# ```
 
-# 
 
-# \- First argument: path to the source `.csv`
+\- First argument: path to the source `.csv`
 
-# \- Second argument: path to the destination `.csv`
+\- Second argument: path to the destination `.csv`
 
-# 
 
-# The script prints either a success message or an error explanation.
 
-# 
+The script prints either a success message or an error explanation.
 
-# ---
 
-# 
 
-# # Deactivate the environment
+---
 
-# 
 
-# ```powershell
 
-# deactivate
+## Deactivate the environment
 
-# ```
 
-# 
+```powershell
 
+deactivate
+
+```
