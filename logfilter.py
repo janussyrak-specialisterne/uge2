@@ -27,11 +27,19 @@ def filter_log_file(source_filename: str, file_type: str, destination_filename: 
 
 def main(argv=None) -> None:
     parser = argparse.ArgumentParser(
-        description="Generate a new file containing only warnings of a specific severity."
+        description="Generate a new file containing only logs of a specific severity."
     )
-    parser.add_argument("source", help="Path to the source log file.")
-    parser.add_argument("destination", help="Path to the destination file.")
+    parser.add_argument("source", help="Name of the source log file (in the data/ folder).")
+    parser.add_argument("destination", help="Prefix for the destination file.")
+    parser.add_argument(
+        "--type",
+        default="INFO",
+        help="Log type to filter (default: INFO, e.g., ERROR, WARNING)."
+    )
+
     args = parser.parse_args(argv)
+
+    filter_log_file(args.source, args.type, args.destination)
 
 
 if __name__ == "__main__":
